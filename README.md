@@ -322,7 +322,7 @@ import * as _ from 'lodash';
 
 ___
 
-enjoy â€” **[Puskomedia Indonesia](https://www.puskomedia.id)**
+enjoy — **[Puskomedia Indonesia](https://www.puskomedia.id)**
 
 ___
 
