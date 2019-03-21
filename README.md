@@ -8,12 +8,6 @@ Desa sebagai ujung tombak pelayanan pemerintahan sangat strategis untuk menjalan
 
 Panda memiliki fitur yang dibutuhkan untuk mengelola data administrasi, kependudukan, pelayanan publik, anggaran dan masih banyak lagi.
 
-**Aplikasi Data Kependudukan**
-**Aplikasi Layanan dan Administrasi Persuratan**
-**Aplikasi Pemerintahan Desa**
-**Aplikasi APBDes**
-**Statistik**
-
 ## Quick start
 **Make sure you have Node version >= 6.0 and NPM >= 3**
 > Clone/Download the repo then edit `app.component.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
