@@ -9,56 +9,10 @@ Desa sebagai ujung tombak pelayanan pemerintahan sangat strategis untuk menjalan
 Panda memiliki fitur yang dibutuhkan untuk mengelola data administrasi, kependudukan, pelayanan publik, anggaran dan masih banyak lagi.
 
 **Aplikasi Data Kependudukan**
-Pengelolaan data kependudukan menggunakan teknologi Panda dapat dilakukan secara cepat dan efektif. Aplikasi data kependudukan Panda dikembangan untuk dapat mengelola :
-
- - Data Keluarga
- - Data Penduduk
- - Rekam Peristiwa
- - Pecah KK
-
 **Aplikasi Layanan dan Administrasi Persuratan**
-
- - Kelola dan buat administrasi surat dengan hanya beberapa klik.
-   Administrasi persuratan desa dapat dengan mudah diarsipkan dengan
-   rapih dan mudah dicari.
- - Inventaris sarana dan prasarana di desa Anda. Inventaris yang rapih
-   dapat memudahkan untuk proses pembangunan jangka pendek maupun jangka
-   panjang.
-
 **Aplikasi Pemerintahan Desa**
-
- - Kelola kas umum desa dengan cepat dan dokumentasikan berbagai jenis
-   keuangan desa dengan baik.
- - Inventaris kekayaan pemerintah desa dengan baik. Gunakan fitur ini
-   untuk mendata semua aset desa dan perbarui data secara berkala.
- - Kelola data pertanahan warga secara baik. Gunakan fitur pertanahan
-   untuk mendata semua data kepemilikan, perijinan, jenis lahan dan lain
-   sebagainya. Manfaatkan fitur pertanahan untuk mengelola pertanahan
-   desa dengan cara yang efektif dan efisien.
-
 **Aplikasi APBDes**
-
- - Rekam informasi anggaran dana desa secara rinci dengan menggunakan
-   aplikasi Panda. Rekam pendapatan asli desa, pendapatan transfer dan
-   pendapatan lainnya.
- - Laporkan realisasi anggaran dengan menggunakan aplikasi Panda.
-   Laporkan struktur keuangan desa untuk transparansi anggaran.
-   Manfaatkan fitur untuk merinci semua anggaran dana desa secara rapih
-   dan terstruktur.
- - Berikan akses informasi penggunaan dana desa kepada warga dan pejabat
-   pengawasan setempat. Gunakan aplikasi Panda untuk melakukan olah data
-   secara cepat.
-
 **Statistik**
-Dapatkan data statistik dari semua data yang telah diinput. Tampilkan statistik untuk mendukung laporan dan transparansi pelaksanaan kegiatan desa dan kabupaten.
-
- - Statistik kependudukan
- - Statistik pendidikan
- - Statistik kesehatan
- - Statistik APBDesa
- - Statistik lahan
- - Statistik administrasi
- - Statistik sarana & prasarana
 
 ## Quick start
 **Make sure you have Node version >= 6.0 and NPM >= 3**
