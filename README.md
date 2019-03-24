@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://www.panda.id/wp-content/uploads/logo-panda.png" width="50%" />
+</p>
+
 # Panda Desktop
 
 Panda merupakan salah satu cita-cita kami mewujudkan Indonesia yang lebih baik. PuskoMedia Indonesia berpengalaman selama 8 tahun mendampingi desa di berbagai pelosok Indonesia. Bersama Gedhe Foundation kami membantu banyak desa menuju keterbukaan informasi.
