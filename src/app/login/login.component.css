@@ -1,122 +1,135 @@
 img {
-    display: block;
-    max-width: 40%;
-    height: auto;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #365899d4;
+  text-decoration: none;
+}
+
+.form-control-login{
+  border-radius: 3px !important;
+  border: 2px solid #ccc !important;
+}
+
+.form-control-login:focus {
+  border: 2px solid #52bad5 !important;
+}
+
+.padding-bottom-login, small.padding-bottom-login{
+  padding-bottom: 0.7em;
+}
+
+@media (max-width: 700px){
+.col-left{
+    width: 100%!important;
   }
-  a {
-    color: #365899d4;
-    text-decoration: none;
-  }
-  
-  .form-control-login{
-    border-radius: 3px !important;
-    border: 2px solid #ccc !important;
-  }
-  
-  .form-control-login:focus {
-    border: 2px solid #52bad5 !important;
-  }
-  .padding-bottom-login, small.padding-bottom-login{
-    padding-bottom: 0.7em;
-  }
-  
-  @media (max-width: 700px){
-  .col-left{
-          width: 100%!important;
-      }
-  }
-  .col-left {
-      width: 33%;
-      height: 80vh;
-      background-color: #ffffff;
-      float: left;
-      padding: 2.855% 0;
-  }
-  @media (max-width: 700px){
+}
+
+.col-left {
+  width: 33%;
+  height: 80vh;
+  background-color: #ffffff;
+  float: left;
+  padding: 2.855% 0;
+}
+
+@media (max-width: 700px){
   .col-right{
-      display: none;
+    display: none;
   }
-  }
-  .col-right {
-      width: 67%;
-      height: 100vh;
-      float: right;
-      background-image: url('https://sid.panda.id/assets/altair/img/panda-hero.jpg'), linear-gradient(143deg,#279bd5 45%,#207bd6 95%);
-      background-size: initial;
-      background-position: top right;
-      background-blend-mode: multiply;
-      background-color: initial;
-  }
-  input.form-control {
-    display: block;
-    width: 95%;
-    height: 34px;
-    padding: 6px 12px;
-    margin: 10px 0;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    border-radius: 5px;
-    background-image: none;
-    border: 1px solid #ccc;
-  }
-  .login-box {
-      max-width: 100%;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 0 25px;
-  }
-  button.tombol {
-      width: 101%;
-      border-radius: 3px;
-      padding: 10px;
-      background-color: #ed5300;
-      color: #ffffff;
-      font-weight: 900;
-      border: 1px solid transparent;
-      cursor: pointer;
-      font-size: larger;
-  }
-  
-  button.tombol:hover {
-      background: #0c71c3 !important;
-  }
-  .login-panda{
-          font-weight: 600 !important;
-      font-size: 32px !important;
-      color: #484848 !important;
-      text-align: center !important;
-      margin-bottom: 20px;
-  }
-  .content {
-      padding: 50px;
-      width: 60%;
-      color: #ffffff;
-      line-height: 1.5em;
-  }
-  a.tombol {
-      position: relative;
-      border: 2px solid;
-      border-radius: 5px;
-      background-color: #f5161600;
-      color: #ffffff;
-      padding: 8px;
-      font-size: 20px;
-      text-decoration: none;
-  }
-  a.tombol:hover {
-      border: 2px solid transparent;
-      background-color: rgba(255,255,255,.2);
-      padding: 5px 5px 5px;
-  }
-  p.paragraf {
-      color: #999;
-      bottom: 0;
-      line-height: 1.3em;
-      font-size: small;
-  }
+}
+
+.col-right {
+  width: 67%;
+  height: 100vh;
+  float: right;
+  background-image: url('https://sid.panda.id/assets/altair/img/panda-hero.jpg'), linear-gradient(143deg,#279bd5 45%,#207bd6 95%);
+  background-size: initial;
+  background-position: top right;
+  background-blend-mode: multiply;
+  background-color: initial;
+}
+
+input.form-control {
+  display: block;
+  width: 95%;
+  height: 34px;
+  padding: 6px 12px;
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border-radius: 5px;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+
+.login-box {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 25px;
+}
+
+button.tombol {
+  width: 101%;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #ed5300;
+  color: #ffffff;
+  font-weight: 900;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: larger;
+}
+
+button.tombol:hover {
+  background: #0c71c3 !important;
+}
+
+.login-panda{
+  font-weight: 600 !important;
+  font-size: 32px !important;
+  color: #484848 !important;
+  text-align: center !important;
+  margin-bottom: 20px;
+}
+
+.content {
+  padding: 50px;
+  width: 60%;
+  color: #ffffff;
+  line-height: 1.5em;
+}
+
+a.tombol {
+  position: relative;
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: #f5161600;
+  color: #ffffff;
+  padding: 8px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.tombol:hover {
+  border: 2px solid transparent;
+  background-color: rgba(255,255,255,.2);
+  padding: 5px 5px 5px;
+}
+
+p.paragraf {
+  color: #999;
+  bottom: 0;
+  line-height: 1.3em;
+  font-size: small;
+}
