@@ -50,7 +50,7 @@ module.exports = function (options) {
 
   const otherFilesToCompile = [
     './src/app/app.module.ts',
-    './src/app/lazy-loaded.ts'
+    // './src/app/lazy-loaded.ts'
   ];
 
   const tsConfigBase = 'tsconfig.webpack.json';
