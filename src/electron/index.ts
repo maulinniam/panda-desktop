@@ -17,7 +17,11 @@ let win;
 
 function createWindow() {
   // Create the browser window.
-  win = new BrowserWindow({width: 976, height: 645});
+  win = new BrowserWindow({
+    minWidth: 976,
+    minHeight: 645,
+    icon: path.join(__dirname, 'assets/icon/panda.ico')
+  });
 
   // and load the index.html of the app.
   win.loadURL(indexUrl);
