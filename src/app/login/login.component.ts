@@ -1,24 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-import { shell } from 'electron';
+import { Router, ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/first';
+
+import { AuthenticationService } from '../_services/index';
 
 @Component({
-  selector: 'app',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: 'login.component.html'
 })
 export class LoginComponent implements OnInit {
+  model: any = {};
+  loading = false;
+  returnUrl: string;
+  error = '';
 
-  public url = 'https://m.me/puskomedia.id';
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) {}
 
-// tslint:disable-next-line: no-empty
-  constructor() { }
+  ngOnInit() {
+    // reset login status
+    this.authenticationService.logout();
 
-// tslint:disable-next-line: no-empty
-  public ngOnInit() {
+    // get return url from route parameters or default to '/'
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  public openURL(url) {
-    shell.openExternal(url);
+  login() {
+    this.loading = true;
+    this.authenticationService
+      .login(this.model.username, this.model.password)
+      .first()
+      .subscribe(
+        data => {
+          this.router.navigate([this.returnUrl]);
+        },
+        error => {
+          this.error = error;
+          this.loading = false;
+        }
+      );
   }
-
 }

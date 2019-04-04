@@ -1,30 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers/index';
 
-import '../styles/app.css';
+import { AppComponent } from './app.component';
+import { routing } from './app.routing';
 
-const routes: Routes = [];
+import { AuthGuard } from './ _guards/index';
+import { JwtInterceptor } from './_helpers/index';
+import { AuthenticationService, UserService } from './_services/index';
+import { LoginComponent } from './login/index';
+import { HomeComponent } from './home/index';
 
 @NgModule({
-  declarations: [
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, routing],
+  declarations: [AppComponent, LoginComponent, HomeComponent],
   providers: [
+    AuthGuard,
+    AuthenticationService,
+    UserService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
+
+    // providers used to create fake backend
+    fakeBackendProvider
   ],
-  exports: [RouterModule],
-  bootstrap: [LoginComponent]
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
