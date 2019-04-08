@@ -16,6 +16,8 @@ import { AuthenticationService, UserService } from './_services/index';
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
 
+import '../styles/styles.scss';
+
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule, routing],
   declarations: [AppComponent, LoginComponent, HomeComponent],
