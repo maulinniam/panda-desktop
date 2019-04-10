@@ -5,7 +5,8 @@ import { User } from '../_models/index';
 import { UserService } from '../_services/index';
 
 @Component({
-  templateUrl: 'home.component.html'
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit {
   users: User[] = [];
