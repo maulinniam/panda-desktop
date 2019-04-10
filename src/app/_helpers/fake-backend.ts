@@ -25,10 +25,10 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     let testUser = {
       id: 1,
-      username: 'test',
-      password: 'test',
-      firstName: 'Test',
-      lastName: 'User'
+      username: 'pandadev',
+      password: 'pandadev',
+      firstName: 'Panda',
+      lastName: 'Dev'
     };
 
     // wrap in delayed observable to simulate server api call
