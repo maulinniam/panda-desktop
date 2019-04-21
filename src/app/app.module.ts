@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ToastModule } from 'ng2-toastr';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/index';
@@ -19,7 +21,14 @@ import { HomeComponent } from './home/index';
 import '../styles/styles.scss';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule, routing],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    routing,
+    ToastModule.forRoot()
+  ],
   declarations: [AppComponent, LoginComponent, HomeComponent],
   providers: [
     AuthGuard,

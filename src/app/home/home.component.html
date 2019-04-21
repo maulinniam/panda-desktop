@@ -1,40 +1,81 @@
-<header id="header_main">
-  <div class="header_main_content">
-      <nav class="uk-navbar">
-                          
-          <!-- main sidebar switch -->
-          <a href="#" id="switch_left" class="sSwitch sSwitch_left" style="display: block;">
-              <span class="sSwitchIcon"></span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
           </a>
-          <!-- <div id="menu_top_dropdown" class="uk-float-left" style="padding:12px 0px">
-              <h4 class="md-color-grey-50">
-                                      </h4>
-          </div> -->
-          <div class="uk-navbar-flip">
-              <ul class="uk-navbar-nav user_actions">
-                  <li class="uk-hidden-small uk-hidden-medium"><a href="http://m.me/puskomedia.id" target="_blank" class="user_action_icon"><i class="material-icons md-24 md-light">comment</i> Chat Facebook</a></li>
-                  <li class="uk-hidden-small uk-hidden-medium"><a href="https://puskomedia.id/bantuan/" target="_blank" class="user_action_icon"><i class="material-icons md-24 md-light">launch</i> Bantuan</a></li>
-                  <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}" aria-haspopup="true" aria-expanded="false" class="">
-                      <a href="#" class="user_action_image">Desa Contoh <img class="md-user-image" src="https://sid.panda.id/files/logo_desa/default.jpg" alt=""></a>
-                      <div class="uk-dropdown uk-dropdown-small uk-dropdown-bottom" style="min-width: 160px; top: 47px; left: -11px;">
-                          <ul class="uk-nav js-uk-prevent">
-                              <li><a href="https://sid.panda.id/profil/view">Profil</a></li>
-                              <li><a href="https://sid.panda.id/akun/editPassword">Ubah Kata Sandi</a></li>
-                              <li class="uk-hidden-large"><a href="http://m.me/puskomedia.id">Chat Facebook</a></li>
-                              <li class="uk-hidden-large"><a href="https://puskomedia.id/bantuan/">Bantuan</a></li>
-                              <li><a href="https://sid.panda.id/login/logout">Logout</a></li>
-                          </ul>
-                      </div>
-                  </li>
-              </ul>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
-      </nav>
-  </div>
-  <div class="header_main_search_form">
-      <i class="md-icon header_main_search_close material-icons"></i>
-      <form class="uk-form">
-          <input type="text" class="header_main_search_input">
-          <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons"></i></button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a [routerLink]="['/login']" class="btn btn-primary">Log Out</a>
       </form>
-  </div>
-</header>
+    </div>
+  </nav>
+
+  <div class="container2">
+    <button class="btn btn-danger" (click)="showSuccess()">Toastr Tester</button><br><br>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="card text-center">
+          <div class="card-body">
+            <a href="" class="surat">
+              <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+              <br>
+              Surat Keterangan Biodata
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            <div class="card-title">
+              <h4>Instagram</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            <div class="card-title">
+              <h4>Instagram</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            <div class="card-title">
+              <h4>Instagram</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

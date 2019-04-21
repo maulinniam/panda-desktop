@@ -1,17 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import 'rxjs/add/operator/first';
+import { ToastsManager } from 'ng2-toastr';
+
+import 'bootstrap';
 
 import { User } from '../_models/index';
 import { UserService } from '../_services/index';
 
 @Component({
-  templateUrl: 'home.component.html',
-  styleUrls: ['home.component.scss']
+  templateUrl: 'home.component.html'
 })
 export class HomeComponent implements OnInit {
   users: User[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    public toastr: ToastsManager,
+    private vcr: ViewContainerRef
+  ) {
+    this.toastr.setRootViewContainerRef(vcr);
+  }
+
+  showSuccess() {
+    this.toastr.success('You are awesome!', 'Success!');
+  }
 
   ngOnInit() {
     // get users from secure api end point
