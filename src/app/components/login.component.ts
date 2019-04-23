@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/first';
 
-import { AuthenticationService } from '../_services/index';
+import { AuthenticationService } from '../helpers/_services/index';
 
 @Component({
-  templateUrl: 'login.component.html'
+  templateUrl: '../templates/login.component.html'
 })
 export class LoginComponent implements OnInit {
   model: any = {};

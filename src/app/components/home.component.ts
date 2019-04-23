@@ -2,15 +2,15 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import 'rxjs/add/operator/first';
 import { ToastsManager } from 'ng2-toastr';
 
-import { User } from '../_models/index';
-import { UserService } from '../_services/index';
+import { User } from '../helpers/_models/index';
+import { UserService } from '../helpers/_services/index';
 
 import '../../styles/app.scss';
 
 import 'bootstrap';
 
 @Component({
-  templateUrl: 'home.component.html'
+  templateUrl: '../templates/home.component.html'
 })
 export class HomeComponent implements OnInit {
   users: User[] = [];
@@ -21,10 +21,6 @@ export class HomeComponent implements OnInit {
     private vcr: ViewContainerRef
   ) {
     this.toastr.setRootViewContainerRef(vcr);
-  }
-
-  showSuccess() {
-    this.toastr.success('You are awesome!', 'Success!');
   }
 
   ngOnInit() {

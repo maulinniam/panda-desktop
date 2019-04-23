@@ -16,7 +16,7 @@ import { shell } from 'electron';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  templateUrl: 'app.component.html'
+  templateUrl: '../templates/app.component.html'
 })
 export class AppComponent implements OnInit {
 

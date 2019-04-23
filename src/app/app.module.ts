@@ -5,18 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ToastModule } from 'ng2-toastr';
+import { Router, RouterModule } from '@angular/router';
 
 // used to create fake backend
-import { fakeBackendProvider } from './_helpers/index';
+import { fakeBackendProvider } from './helpers/_helpers/index';
 
-import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import { AppComponent } from './components/app.component';
 
-import { AuthGuard } from './ _guards/index';
-import { JwtInterceptor } from './_helpers/index';
-import { AuthenticationService, UserService } from './_services/index';
-import { LoginComponent } from './login/index';
-import { HomeComponent } from './home/index';
+import { AuthGuard } from './helpers/ _guards/index';
+import { JwtInterceptor } from './helpers/_helpers/index';
+import { AuthenticationService, UserService } from './helpers/_services/index';
+import { LoginComponent } from './components/login.component';
+import { HomeComponent } from './components/home.component';
 
 import '../styles/styles.scss';
 
@@ -26,8 +26,12 @@ import '../styles/styles.scss';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    routing,
-    ToastModule.forRoot()
+    ToastModule.forRoot(),
+    RouterModule.forRoot([
+      { path: 'login', component: LoginComponent },
+      { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+      { path: '**', redirectTo: '' }
+    ])
   ],
   declarations: [AppComponent, LoginComponent, HomeComponent],
   providers: [
