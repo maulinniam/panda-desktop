@@ -2,10 +2,12 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import 'rxjs/add/operator/first';
 import { ToastsManager } from 'ng2-toastr';
 
-import 'bootstrap';
-
 import { User } from '../_models/index';
 import { UserService } from '../_services/index';
+
+import '../../styles/app.scss';
+
+import 'bootstrap';
 
 @Component({
   templateUrl: 'home.component.html'
