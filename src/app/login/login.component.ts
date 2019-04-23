@@ -5,14 +5,15 @@ import 'rxjs/add/operator/first';
 import { AuthenticationService } from '../_services/index';
 
 @Component({
-  templateUrl: 'login.component.html',
-  styleUrls: ['login.component.scss']
+  templateUrl: 'login.component.html'
 })
 export class LoginComponent implements OnInit {
   model: any = {};
   loading = false;
   returnUrl: string;
   error = '';
+
+  public pandaLogo = 'assets/img/logo-panda.png';
 
   constructor(
     private route: ActivatedRoute,

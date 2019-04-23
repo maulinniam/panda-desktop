@@ -1,7 +1,7 @@
 <div class="body">
   <div class="wrapper">
     <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" class="login" novalidate>
-      <p class="title">Log in</p>
+      <img [src]="pandaLogo" class="logo" width="70%">
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
         <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
         <i class="fa fa-user"></i>

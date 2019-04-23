@@ -1,46 +1,135 @@
 /* this file will be extracted to main dist folder and is imported in index.html */
 /* This file is for setting global styles  */
 @import "../../node_modules/font-awesome/css/font-awesome.min.css";
-@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../../node_modules/ng2-toastr/ng2-toastr.css";
 
+$color_1: #ccc;
+$color_2: #fff;
+$color_3: #444;
+$color_4: #2196f3;
+$color_5: #ddd;
+$background_color_1: #8bc34a;
+$border_color_1: #2196f3;
 $font_family_1: "Open Sans", sans-serif;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-	margin: 0;
-	font-family: $font_family_1;
-	height: 100vh;
-	background-color: #ececec;
+  margin: 0;
+  padding: 0;
+  font-family: $font_family_1;
+  height: 100vh;
+  background-color: #ececec;
 }
 
-.container2{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+.body {
+  height: 100vh;
+  background: url("../assets/img/banner.jpg") 50% fixed;
+  background-size: cover;
 }
-
-nav{
-	margin-bottom: 5%;
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  background: rgba(4, 40, 68, 0.85);
 }
-
-.card{
-	background: #fff;
-    position: relative;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.login {
+  border-radius: 2px 2px 5px 5px;
+  padding: 10px 20px 20px 20px;
+  width: 90%;
+  max-width: 320px;
+  background: #ffffff;
+  position: relative;
+  padding-bottom: 80px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  input {
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    transition: border-width 0.2s ease;
+    border-radius: 2px;
+    color: $color_1;
+    & + i.fa {
+      color: $color_2;
+      font-size: 1em;
+      position: absolute;
+      margin-top: -47px;
+      opacity: 0;
+      left: 0;
+      transition: all 0.1s ease-in;
+    }
+    &:focus {
+      outline: none;
+      color: $color_3;
+      border-color: $border_color_1;
+      border-left-width: 35px;
+      & + i.fa {
+        opacity: 1;
+        left: 30px;
+        transition: all 0.25s ease-out;
+      }
+    }
+  }
+  a {
+    font-size: 0.8em;
+    color: $color_4;
+    text-decoration: none;
+  }
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-bottom: 5%;
+  }
+  button {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    background: #2196f3;
+    color: $color_2;
+    cursor: pointer;
+    display: block;
     border: none;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-height: 60px;
+    border: 0px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 2px 2px;
+    transform: rotateZ(0deg);
+    transition: all 0.1s ease-out;
+    border-bottom-width: 7px;
+  }
 }
-
-.card-body{
-	padding: 16px;
-}
-
-.fa{
-	font-size: 48px;
-}
-
-.surat{
-	color: #00a65a !important;
-	font-weight: 700;
-	cursor: pointer;
-	text-decoration: none;
+footer {
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+  color: $color_5;
+  font-weight: normal;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+  font-size: 0.8em;
+  p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a {
+    color: $color_2;
+    text-decoration: none;
+    &:link {
+      color: $color_2;
+      text-decoration: none;
+    }
+  }
 }
