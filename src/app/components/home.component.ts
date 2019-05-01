@@ -5,8 +5,6 @@ import { ToastsManager } from 'ng2-toastr';
 import { User } from '../helpers/_models/index';
 import { UserService } from '../helpers/_services/index';
 
-import '../../styles/app.scss';
-
 import 'bootstrap';
 
 @Component({

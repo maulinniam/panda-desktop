@@ -4,19 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100%;
-  font: 400 14px / 1.42857143 "Roboto", sans-serif;
-  padding-top: 48px;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-a {
-  color: #07d;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 #header_main {
   margin-left: 240px;
@@ -159,6 +146,7 @@ img {
 }
 
 #page_content {
+  padding-top: 48px;
   margin-left: 240px;
   transition: margin 280ms;
 }

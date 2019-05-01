@@ -17,6 +17,7 @@ import { JwtInterceptor } from './helpers/_helpers/index';
 import { AuthenticationService, UserService } from './helpers/_services/index';
 import { LoginComponent } from './components/login.component';
 import { HomeComponent } from './components/home.component';
+import { SuratktpComponent } from './components/suratktp.component';
 
 import '../styles/styles.scss';
 
@@ -30,10 +31,16 @@ import '../styles/styles.scss';
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+      { path: 'suratktp', component: SuratktpComponent },
       { path: '**', redirectTo: '' }
     ])
   ],
-  declarations: [AppComponent, LoginComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    SuratktpComponent
+  ],
   providers: [
     AuthGuard,
     AuthenticationService,
