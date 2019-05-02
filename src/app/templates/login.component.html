@@ -1,26 +1,57 @@
-<div class="body">
-  <div class="wrapper">
-    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" class="login" novalidate>
-      <img [src]="pandaLogo" class="logo" width="70%">
-      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-        <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-        <i class="fa fa-user"></i>
+<div class="col-left">
+  <img src="https://sid.panda.id/assets/images/logo/logo_login.png">
+  <h1 class="login-panda">Log In</h1>
+  <div class="login-box">
+    <form class="form-box" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+      <div class="padding-bottom-login">
+        <small>Butuh akun Panda SID? <a href="//m.me/puskomedia.id">Kontak kami</a></small>
+      </div>
+      <div class="form-group padding-bottom-login" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+        <!-- <label for="username">Nama Pengguna</label> -->
+        <input class="form-control form-control-login" type="text" id="username" name="username"
+          [(ngModel)]="model.username" #username="ngModel" placeholder="Nama Pengguna" required />
         <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
       </div>
-      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
-        <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
-        <i class="fa fa-key"></i>
+      <div class="form-group uk-margin-top padding-bottom-login"
+        [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <!-- <label for="password">Kata Sandi</label> -->
+        <input class="form-control form-control-login" type="password" id="password" name="password"
+          placeholder="Kata Sandi" [(ngModel)]="model.password" #password="ngModel" required />
         <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
       </div>
-      <a href="#">Lupa kata sandi?</a>
-      <button [disabled]="loading">
-        <span class="state">Masuk</span>
-        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-      </button>
+      <div class="uk-margin-medium-bottom padding-bottom-login">
+        <small><a href="//m.me/puskomedia.id">Lupa Kata Sandi?</a></small>
+      </div>
+      <div class="uk-margin-medium-bottom padding-bottom-login">
+        <button class="tombol" [disabled]="loading">
+          <span class="state">Masuk</span>
+          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </button>
+      </div>
       <div *ngIf="error" class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         {{ error }}
       </div>
+      <div class="uk-margin-top">
+        <!-- <a href="#" id="login_help_show" class="uk-float-right">Need help?</a> -->
+
+        <!-- <span class="icheck-inline">
+                      <input type="checkbox" name="login_page_stay_signed" id="login_page_stay_signed" data-md-icheck />
+                      <label for="login_page_stay_signed" class="inline-label">Tetap Masuk</label>
+                  </span> -->
+      </div>
+      <div class="uk-margin-top">
+        <p class="paragraf"> &copy; 2018. Teknologi Panda SID dikembangkan oleh PuskoMedia Indonesia Kreatif. Pelajari
+          Kebijakan Privasi dan Syarat Ketentuan Layanan.</p>
+      </div>
     </form>
+  </div>
+</div>
+<div class="col-right">
+  <div class="content">
+    <h3>Selamat Datang di PANDA dari PuskoMedia Indonesia</h3>
+    <p>PANDA dikembangkan sebagai DNA Smart Society Indonesia. Desa sebagai elemen terdekat dengan masyarakat memiliki
+      peran paling penting dalam pembangunan</p>
+    <a href="https://www.panda.id" class="tombol" role="button">Pelajari</a>
   </div>
 </div>
