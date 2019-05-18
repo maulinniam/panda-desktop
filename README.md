@@ -14,7 +14,7 @@ Panda memiliki fitur yang dibutuhkan untuk mengelola data administrasi, kependud
 
 ## Cara Cepat
 **Pastikan Anda memiliki versi Node >= 6.0 dan NPM >= 3**
-> Clone/Unduh repo kemudian edit `app.component.ts` di [`/src/app/app.component.ts`](/src/app/app.component.ts)
+> Clone/Unduh repo terlebih dahulu
 
 ```bash
 # clone repo
