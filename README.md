@@ -18,8 +18,7 @@ Panda memiliki fitur yang dibutuhkan untuk mengelola data administrasi, kependud
 
 ```bash
 # clone repo
-# --depth 1 menghapus semua kecuali satu riwayat .git commit
-hg clone https://razaqultegar@bitbucket.org/pandadesktop/panda-desktop
+git clone https://razaqultegar@bitbucket.org/pandadesktop/panda-desktop
 
 # masuk ke direktori
 cd panda-desktop
