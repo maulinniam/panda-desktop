@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { ToastModule } from 'ng2-toastr';
 import { Router, RouterModule } from '@angular/router';
 
 // used to create fake backend
@@ -27,7 +26,6 @@ import '../styles/styles.scss';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    ToastModule.forRoot(),
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: '', component: HomeComponent, canActivate: [AuthGuard] },

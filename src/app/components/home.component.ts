@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import 'rxjs/add/operator/first';
-import { ToastsManager } from 'ng2-toastr';
 
 import { User } from '../helpers/_models/index';
 import { UserService } from '../helpers/_services/index';
@@ -14,12 +13,8 @@ export class HomeComponent implements OnInit {
   users: User[] = [];
 
   constructor(
-    private userService: UserService,
-    public toastr: ToastsManager,
-    private vcr: ViewContainerRef
-  ) {
-    this.toastr.setRootViewContainerRef(vcr);
-  }
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
     // get users from secure api end point
